@@ -231,6 +231,17 @@ class CloudflareStream
         return $this->http->get("{$this->baseUrl}/{$this->accountId}/stream/{$id}")->json();
     }
 
+     /**
+     * Fetch video details
+     *
+     * @param string $id
+     * @return array
+     */
+    public function fetchAllVideos(): array
+    {
+        return $this->http->get("{$this->baseUrl}/{$this->accountId}/stream")->json();
+    }
+
     /**
      * Delete video
      *
